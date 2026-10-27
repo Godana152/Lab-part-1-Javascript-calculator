@@ -76,6 +76,17 @@ console.log(calculator(2,'*',3))
 
 history.forEach((item) => {console.log(`${item.num1},${item.operator},${item.num2} = ${item.result}`)});
 console.log(history)
+ 
+function displayHistory(){
+    const historyList = document.getElementById('history-list')
+    historyList.innerHTML = ''
+    history.forEach((item)=>{
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.num1},${item.operator},${item.num2} = ${item.result}`
+
+    historyList.appendChild(listItem)
+})}
+displayHistory
 
 
 
